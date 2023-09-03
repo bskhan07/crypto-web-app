@@ -25,10 +25,10 @@ const Coins = () => {
   const currencySymbol =
     currency === "inr" ? "₹" : currency === "usd" ? "$" : "€";
 
-    const loadMore = () =>{
-      setLoading(true)
-      setPage(page + 1)
-    }
+  const loadMore = () => {
+    setLoading(true);
+    setPage(page + 1);
+  };
 
   useEffect(() => {
     const fetchCoins = async () => {
