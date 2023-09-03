@@ -25,6 +25,11 @@ const Coins = () => {
   const currencySymbol =
     currency === "inr" ? "₹" : currency === "usd" ? "$" : "€";
 
+    const loadMore = () =>{
+      setLoading(true)
+      setPage(page + 1)
+    }
+
   useEffect(() => {
     const fetchCoins = async () => {
       try {
@@ -91,7 +96,7 @@ const Coins = () => {
           </HStack>
           <HStack py={"8"} justifyContent={"center"}>
             <Button
-              onClick={() => setPage(page + 1)}
+              onClick={() => loadMore()}
               colorScheme="purple"
               variant="solid"
             >
